@@ -2,20 +2,14 @@
 
 /*	Definition section */
 
-/*	insert the C library and variables you need */
-
 	#include <stdio.h>
 	#include <stdlib.h>
 	#include <ctype.h>
 	#include <string.h>
 	#include <stdbool.h>
-/*
-	Symbol table function
 
-	TAs create the basic function which you have to fill.
-	We encourage you define new function to make the program work better.
-	However, the four basic functions must be finished.
-*/
+/* Symbol table function */
+
 	int linenum = 0;
 	int idx = 0;
 	bool table_created = false;
@@ -118,11 +112,10 @@ _print [pP][rR][iI][nN][tT]
 						}
 " "         {;}
 [\t]				{;}
+
 %%
 
 /*	C Code section */
-
-/*	You have to define your C function in this section */
 
 int main(int argc,char *argv[]){
 
@@ -150,7 +143,7 @@ void insert_symbol(char* s){
 	strcpy(table[idx].id, s);
   strcpy(table[idx].type, type_tmp);
 	idx++;
-	printf("Insert a symbol: %s\n", s);	return;
+	printf("Insert a symbol: %s\n", s);
 	return;
 }
 
